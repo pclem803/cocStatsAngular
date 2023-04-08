@@ -1,0 +1,34 @@
+<h1>{{ title }}</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th (click)="sortTable('playerName')">Player Name</th>
+      <th (click)="sortTable('playerRole')">Player Role</th>
+      <th (click)="sortTable('playerTownHall')">TH</th>
+      <th (click)="sortTable('trophies')">Trophies</th>
+      <th (click)="sortTable('total_attacks')">Total Attacks</th>
+      <th (click)="sortTable('attacks_given')">Attacks Given</th>
+      <th (click)="sortTable('attack_usage_rate')">Attack Usage Rate</th>
+      <th (click)="sortTable('average_stars')">Average Stars</th>
+      <th (click)="sortTable('average_destruction')">Average Destruction</th>
+      <th (click)="sortTable('total_stars')">Total Stars</th>
+      <th (click)="sortTable('total_destruction')">Total Destruction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of sortedItems">
+      <td>{{ getColumn(item, 'playerName') }}</td>
+      <td>{{ getColumn(item, 'playerRole') }}</td>
+      <td>{{ getColumn(item, 'playerTownHall') }}</td>
+      <td>{{ getColumn(item, 'trophies') }}</td>
+      <td>{{ getColumn(item, 'total_attacks') }}</td>
+      <td>{{ getColumn(item, 'attacks_given') }}</td>
+      <td>{{ getColumn(item, 'attack_usage_rate') }}</td>
+      <td>{{ getColumn(item, 'average_stars') }}</td>
+      <td>{{ getColumn(item, 'average_destruction') }}</td>
+      <td>{{ getColumn(item, 'total_stars') }}</td>
+      <td>{{ getColumn(item, 'total_destruction') }}</td>
+    </tr>
+  </tbody>
+</table>

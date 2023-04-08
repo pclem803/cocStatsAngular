@@ -63,7 +63,8 @@
               "browserTarget": "cocFrontEnd:build:production"
             },
             "development": {
-              "browserTarget": "cocFrontEnd:build:development"
+              "browserTarget": "cocFrontEnd:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
